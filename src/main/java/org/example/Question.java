@@ -14,6 +14,7 @@ public class Question {
     private String q_stmt;
 
     @OneToMany(mappedBy = "question",cascade = CascadeType.ALL)
+    @Column(name = "answer_id")
     List<Answer> answers;
 
     public Question() {
@@ -38,5 +39,13 @@ public class Question {
 
     public void setQ_stmt(String q_stmt) {
         this.q_stmt = q_stmt;
+    }
+
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
     }
 }

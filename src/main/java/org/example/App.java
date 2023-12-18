@@ -29,7 +29,7 @@ public class App
         itemsForCart1.add(item2);
         itemsForCart1.add(item3);
         itemsForCart1.add(item4);
-        cart1.setCart_id(1);
+        cart1.setCartId(1);
         cart1.setItems(itemsForCart1);
         cart1.setTotal(165);
 

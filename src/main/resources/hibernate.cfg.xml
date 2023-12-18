@@ -9,8 +9,12 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/student</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
         <mapping class="org.example.Cart"></mapping>
         <mapping class="org.example.Item"></mapping>
+        <mapping class="org.example.Question"></mapping>
+        <mapping class="org.example.Answer"></mapping>
+        <mapping class="org.example.Author"></mapping>
+        <mapping class="org.example.Book"></mapping>
     </session-factory>
 </hibernate-configuration>

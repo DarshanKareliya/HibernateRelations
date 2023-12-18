@@ -9,7 +9,7 @@ public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cart_id")
-    private int cart_id;
+    private int cartId;
     @Column(name = "total")
     private int total;
 
@@ -19,18 +19,19 @@ public class Cart {
     public Cart() {
     }
 
-    public Cart(int cart_id, List<Item> items, int total) {
-        this.cart_id = cart_id;
+    public Cart(int cartId, List<Item> items, int total) {
+        this.cartId = cartId;
         this.items = items;
         this.total = total;
     }
 
-    public int getCart_id() {
-        return cart_id;
+
+    public int getCartId() {
+        return cartId;
     }
 
-    public void setCart_id(int cart_id) {
-        this.cart_id = cart_id;
+    public void setCartId(int cartId) {
+        this.cartId = cartId;
     }
 
     public List<Item> getItems() {
