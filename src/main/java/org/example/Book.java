@@ -9,6 +9,7 @@ import java.util.List;
 public class Book {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "book_id")
     private int bookId;
 
@@ -18,7 +19,12 @@ public class Book {
     @Column(name = "book_price")
     private int price;
 
-    @ManyToMany(mappedBy = "books")
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "MToMTable",
+            joinColumns={@JoinColumn(name="book_id")},
+            inverseJoinColumns={@JoinColumn(name="author_id")})  // in @JoinTable name = name of join table
+                                                                 // joincolumns = name of column of this object (Book)
+                                                                 // inverseJoin column = name of column in join table of other table (author)
     private List<Author> authors;
 
     public Book() {

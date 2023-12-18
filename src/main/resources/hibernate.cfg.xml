@@ -6,14 +6,14 @@
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.password">Peakenza@1234</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/student</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hbm2ddl.auto">create</property>
-        <mapping class="org.example.Cart"></mapping>
+        <property name="hbm2ddl.auto">update</property>
+      <!--  <mapping class="org.example.Cart"></mapping>
         <mapping class="org.example.Item"></mapping>
         <mapping class="org.example.Question"></mapping>
-        <mapping class="org.example.Answer"></mapping>
+        <mapping class="org.example.Answer"></mapping>-->
         <mapping class="org.example.Author"></mapping>
         <mapping class="org.example.Book"></mapping>
     </session-factory>

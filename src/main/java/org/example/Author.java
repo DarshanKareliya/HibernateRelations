@@ -10,6 +10,7 @@ import java.util.List;
 public class Author {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "author_id")
     private int authorId;
 
@@ -17,7 +18,7 @@ public class Author {
     private String authorName;
 
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Book> books;
 
     public Author() {
